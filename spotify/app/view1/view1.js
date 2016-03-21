@@ -15,12 +15,17 @@ angular.module('myApp.view1', ['ngRoute'])
     $scope.results = [];
 
     $scope.search = function() {
+        $scope.message = "";
     	AppSrv.recentSearch = $scope.searchString;
         $http({
             method: 'GET',
             url: 'https://api.spotify.com/v1/search?q=' + $scope.searchString + types
         }).then(function successCallback(response) {
             $scope.results = response.data.artists.items;
+            if(!$scope.results.length){
+                $scope.message = "No results found.";
+            }
+
         }, function errorCallback(response) {
             alert("fail");
         });
