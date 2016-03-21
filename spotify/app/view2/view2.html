@@ -1,0 +1,9 @@
+<div>
+	{{selectedArtist.name}} Top Hits
+	<div ng-repeat="track in results" style="margin-top:10px;">
+		<ol>
+			<li>{{$index+1}}.   {{track.name}}</li>
+		</ol>
+	<!-- 	{{track.album.name}} -->
+	</div>
+</div>
