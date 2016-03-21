@@ -1,4 +1,8 @@
 /* app css stylesheet */
+/*body{
+  background-color: #D3D9CE;
+  color: #2C2633;
+}*/
 
 .menu {
   list-style: none;
@@ -29,6 +33,35 @@
   padding: 0;
 }
 
-li {
-  list-style-type: none;
+.flex-table { 
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flex-table-row {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  line-height: 2em;
+    /*&:nth-of-type(even) { background-color: $dark-color; }
+    &:nth-of-type(odd) { background-color: $light-color; }
+      &:nth-of-type(even) { background-color: $light-color; }
+      &:nth-of-type(odd) { background-color: $dark-color; }*/
+}
+.flex-table-row:hover{
+  background-color: ;
+}
+
+.flex-table-item {
+  display: flex;
+  flex-flow:row nowrap;
+  flex-grow: 1;
+/*      @include flex-basis(0);
+      @include word-wrap;*/
+  padding: 0.5em;
+/*      word-break: break-word;
+      &:before {
+        content: attr(data-header);
+        width: 30%;
+        font-weight: 700;*/
 }
