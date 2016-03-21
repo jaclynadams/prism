@@ -1,9 +1,10 @@
 <div class="container">
 	{{selectedArtist.name}} Top Hits
-	<div ng-repeat="track in results" style="margin-top:10px;">
-		<ol>
-			<li>{{track.name}}</li>
-		</ol>
-	<!-- 	{{track.album.name}} -->
+	<div class="flex-table">
+		<div ng-repeat="track in results" style="margin-top:10px;" class="flex-table-row-static">
+			{{$index+1}}. {{track.name}}
+		<!-- 	{{track.album.name}} -->
+		</div>
+		<div ng-if="message!==''"><i>{{message}}<i><div>
 	</div>
 </div>
