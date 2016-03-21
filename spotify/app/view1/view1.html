@@ -1,17 +1,19 @@
-<div class="row">
-	<div class="col-md-4">
-		<div class="input-group">
-		    <input ng-model="searchString" type="text" class="form-control" placeholder="Search for an artist">
-		    <span class="input-group-btn">
-		        <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
-		     </span>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="input-group">
+			    <input ng-model="searchString" type="text" class="form-control" placeholder="Search for an artist" ng-keyup="$event.keyCode == 13 && search()">
+			    <span class="input-group-btn">
+			        <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
+			     </span>
+			</div>
 		</div>
 	</div>
-</div>
-<div id="results">
-	<div ng-repeat="artist in results">
-		<ul>
-			<a href="#/view2" ng-click="selectArtist(artist.name, artist.id)"><li> {{artist.name}}</li></a>
-		</ul>
+	<div id="results">
+		<div ng-repeat="artist in results">
+			<ul>
+				<a href="#/view2" ng-click="selectArtist(artist.name, artist.id)"><li> {{artist.name}}</li></a>
+			</ul>
+		</div>
 	</div>
 </div>
