@@ -1,0 +1,16 @@
+{
+  "name": "about-us-parser",
+  "version": "1.0.0",
+  "description": "parse it, then print",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaclyn Adams",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0"
+  }
+}
