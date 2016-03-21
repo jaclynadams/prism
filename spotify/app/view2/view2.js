@@ -11,11 +11,15 @@ angular.module('myApp.view2', ['ngRoute'])
 
 .controller('View2Ctrl', ['$scope', '$http', 'AppSrv', function($scope, $http, AppSrv) {
 		$scope.selectedArtist = AppSrv.selectedArtist;
+        $scope.message = "";
 		$http({
             method: 'GET',
             url: 'https://api.spotify.com/v1/artists/'+ AppSrv.selectedArtist.id + '/top-tracks?country=US'
         }).then(function successCallback(response) {
             $scope.results = response.data.tracks;
+            if(!$scope.results.length){
+                $scope.message = "No top hits found.";
+            }
         }, function errorCallback(response) {
             alert("fail");
         });
